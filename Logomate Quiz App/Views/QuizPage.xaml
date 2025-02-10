@@ -1,0 +1,29 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Logomate_Quiz_App.Views.QuizPage">
+    <VerticalStackLayout Padding="20">
+
+        <!-- Current question indicator -->
+        <Label x:Name="QuestionCounterLabel" FontSize="18" TextColor="Gray" HorizontalOptions="Center"/>
+
+        <!-- Question text -->
+        <Label x:Name="QuestionLabel" FontSize="20" FontAttributes="Bold"/>
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="Answer1" CheckedChanged="OnAnswerChecked"/>
+            <Label x:Name="Answer1Text"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="Answer2" CheckedChanged="OnAnswerChecked"/>
+            <Label x:Name="Answer2Text"/>
+        </HorizontalStackLayout>
+
+        <HorizontalStackLayout>
+            <CheckBox x:Name="Answer3" CheckedChanged="OnAnswerChecked"/>
+            <Label x:Name="Answer3Text"/>
+        </HorizontalStackLayout>
+
+        <Button Text="Next" Clicked="OnNextClicked"/>
+    </VerticalStackLayout>
+</ContentPage>
